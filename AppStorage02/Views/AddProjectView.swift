@@ -19,13 +19,13 @@ struct AddProjectView: View {
             EditProjectView(project: $newProject)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("Dismiss") {
+                        Button("Cancel") {
                             showAddProjectView = false
                         }
                     }
                     
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("Add") {
+                        Button("Save") {
                             showAddProjectView =  false
                             
                             projects.append(newProject)

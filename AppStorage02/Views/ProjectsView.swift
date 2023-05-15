@@ -38,6 +38,10 @@ struct ProjectsView: View {
                     Image(systemName: "plus")
                 }
             }
+            .sheet(isPresented: $showAddProjectView) {
+                AddProjectView(projects: $projects,
+                               showAddProjectView: $showAddProjectView)
+            }
             .onAppear {
                 if isFirstTime {
                     loadSampleData()
@@ -49,10 +53,6 @@ struct ProjectsView: View {
                 }
                 
                 projects = decodedProjects
-            }
-            .sheet(isPresented: $showAddProjectView) {
-                AddProjectView(projects: $projects,
-                               showAddProjectView: $showAddProjectView)
             }
         } //: NavigationStack
     }

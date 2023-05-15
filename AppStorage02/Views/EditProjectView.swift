@@ -49,6 +49,8 @@ struct EditProjectView: View {
                 Text("Fashion Items")
             }
         } //: Form
+        .navigationTitle("New Project")
+        .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showAddItemView) {
             NavigationStack {
                 AddItemView(project: $project)
@@ -56,12 +58,6 @@ struct EditProjectView: View {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Dismiss") {
                                 showAddItemView = false
-                            }
-                        }
-                        
-                        ToolbarItem(placement: .confirmationAction) {
-                            Button("Add") {
-                                showAddItemView =  false
                             }
                         }
                     }

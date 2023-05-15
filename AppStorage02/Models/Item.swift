@@ -11,13 +11,13 @@ struct Item: Identifiable, Codable {
     var id = UUID()
     var store: String
     var name: String
-    var quantity: Int
     var price: Int
+    var quantity: Int
     var measurementUnit: String
     
     static let sampleData: [Item] = [
-        Item(store: "Toko Kain", name: "Kain katun", quantity: 2, price: 25_000, measurementUnit: "meter"),
-        Item(store: "Toko Benang", name: "Benang jahit", quantity: 3, price: 1_500, measurementUnit: "pcs"),
-        Item(store: "Toko Kancing", name: "Kancing baju", quantity: 1, price: 3_000, measurementUnit: "dozen"),
+        Item(store: "Toko Kain", name: "Kain katun", price: 25_000, quantity: 2, measurementUnit: "meter"),
+        Item(store: "Toko Benang", name: "Benang jahit", price: 1_500, quantity: 3, measurementUnit: "pcs"),
+        Item(store: "Toko Kancing", name: "Kancing baju", price: 3_000, quantity: 1, measurementUnit: "dozen"),
     ]
 }
