@@ -13,7 +13,6 @@ struct ProjectsView: View {
     
     @State private var projects: [Project] = [Project]()
     @State private var showAddProjectView: Bool = false
-    
     @State private var isFirstTime: Bool = true
     
     var body: some View {

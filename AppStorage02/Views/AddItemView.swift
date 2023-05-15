@@ -10,6 +10,7 @@ import SwiftUI
 struct AddItemView: View {
     
     @AppStorage("projectStorage") var projectStorage: Data = Data()
+    
     @Binding var project: Project
     
     @State private var itemName: String = ""

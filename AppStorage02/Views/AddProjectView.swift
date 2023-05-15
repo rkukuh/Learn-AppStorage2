@@ -11,6 +11,7 @@ struct AddProjectView: View {
     
     @Binding var projects: [Project]
     @Binding var showAddProjectView: Bool
+    
     @State private var newProject = Project.emptyProject
     
     var body: some View {

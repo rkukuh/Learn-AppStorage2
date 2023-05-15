@@ -103,8 +103,7 @@
 			children = (
 				4A9CC51D2A0E294D00D480B4 /* ProjectsView.swift */,
 				4A9CC51F2A0E3F0700D480B4 /* ProjectDetailView.swift */,
-				4A9CC54B2A122CF400D480B4 /* AddProjectView.swift */,
-				4A9CC54D2A122F5F00D480B4 /* EditProjectView.swift */,
+				4A9CC54F2A129AC700D480B4 /* Form */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -112,9 +111,26 @@
 		4A9CC54A2A11E51E00D480B4 /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				4A9CC50D2A0E25F500D480B4 /* AddItemView.swift */,
+				4A9CC5502A129AE600D480B4 /* Form */,
 			);
 			name = Item;
+			sourceTree = "<group>";
+		};
+		4A9CC54F2A129AC700D480B4 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				4A9CC54B2A122CF400D480B4 /* AddProjectView.swift */,
+				4A9CC54D2A122F5F00D480B4 /* EditProjectView.swift */,
+			);
+			name = Form;
+			sourceTree = "<group>";
+		};
+		4A9CC5502A129AE600D480B4 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				4A9CC50D2A0E25F500D480B4 /* AddItemView.swift */,
+			);
+			name = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
