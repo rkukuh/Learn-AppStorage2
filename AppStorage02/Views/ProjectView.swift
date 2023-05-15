@@ -20,8 +20,10 @@ struct ProjectView: View {
                         .font(.title)
                         .foregroundColor(.secondary)
                 } else {
-                    List(projects) { project in
-                        Text(project.name)
+                    List($projects) { $project in
+                        NavigationLink(destination: ProjectDetailView(project: $project)) {
+                            Text(project.name)
+                        }
                     }
                 }
             } //: Group

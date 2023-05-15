@@ -10,17 +10,17 @@ import Foundation
 struct Project: Identifiable, Codable {
     var id = UUID()
     var name: String
-    var shoppingList: [Item]
+    var items: [Item]
     
     static let sampleData: [Project] = [
         Project(name: "Baju Anak",
-                shoppingList: [
+                items: [
                     Item.sampleData[0],
                     Item.sampleData[1],
                     Item.sampleData[2]
                 ]),
         Project(name: "Sweater",
-                shoppingList: [
+                items: [
                     Item.sampleData[0],
                     Item.sampleData[1]
                 ])

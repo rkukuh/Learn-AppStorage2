@@ -14,13 +14,14 @@ struct ProjectDetailView: View {
     var body: some View {
         List {
             Section {
-                ForEach(project.shoppingList) { item in
+                ForEach(project.items) { item in
                     Text(item.name)
                 }
             } header: {
                 Text("Items")
             }
         }
+        .navigationTitle(project.name)
     }
 }
 
