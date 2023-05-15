@@ -88,11 +88,27 @@
 		4A9CC5462A11E45F00D480B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4A9CC51D2A0E294D00D480B4 /* ProjectView.swift */,
-				4A9CC51F2A0E3F0700D480B4 /* ProjectDetailView.swift */,
-				4A9CC50D2A0E25F500D480B4 /* ShoppingView.swift */,
+				4A9CC5482A11E4F300D480B4 /* Project */,
+				4A9CC54A2A11E51E00D480B4 /* Shopping */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4A9CC5482A11E4F300D480B4 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				4A9CC51D2A0E294D00D480B4 /* ProjectView.swift */,
+				4A9CC51F2A0E3F0700D480B4 /* ProjectDetailView.swift */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		4A9CC54A2A11E51E00D480B4 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				4A9CC50D2A0E25F500D480B4 /* ShoppingView.swift */,
+			);
+			name = Shopping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
