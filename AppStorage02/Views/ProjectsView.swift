@@ -12,7 +12,7 @@ struct ProjectsView: View {
     @AppStorage("projectStorage") var projectStorage: Data = Data()
     
     @State private var projects: [Project] = [Project]()
-    @State private var showNewProjectView: Bool = false
+    @State private var showAddProjectView: Bool = false
     
     @State private var isFirstTime: Bool = true
     
@@ -34,7 +34,7 @@ struct ProjectsView: View {
             .navigationTitle("Fashion Projects")
             .toolbar {
                 Button {
-                    showNewProjectView = true
+                    showAddProjectView = true
                 } label: {
                     Image(systemName: "plus")
                 }
@@ -51,9 +51,9 @@ struct ProjectsView: View {
                 
                 projects = decodedProjects
             }
-            .sheet(isPresented: $showNewProjectView) {
+            .sheet(isPresented: $showAddProjectView) {
                 AddProjectView(projects: $projects,
-                               showNewProjectView: $showNewProjectView)
+                               showAddProjectView: $showAddProjectView)
             }
         } //: NavigationStack
     }

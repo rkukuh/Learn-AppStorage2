@@ -10,7 +10,7 @@ import SwiftUI
 struct AddProjectView: View {
     
     @Binding var projects: [Project]
-    @Binding var showNewProjectView: Bool
+    @Binding var showAddProjectView: Bool
     @State private var newProject = Project.emptyProject
     
     var body: some View {
@@ -19,25 +19,25 @@ struct AddProjectView: View {
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Dismiss") {
-                            showNewProjectView = false
+                            showAddProjectView = false
                         }
                     }
                     
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Add") {
-                            showNewProjectView =  false
+                            showAddProjectView =  false
                             
                             projects.append(newProject)
                         }
                     }
                 }
-        }
+        } //: NavigationStack
     }
 }
 
 struct AddProjectView_Previews: PreviewProvider {
     static var previews: some View {
         AddProjectView(projects: .constant(Project.sampleData),
-                       showNewProjectView: .constant(true))
+                       showAddProjectView: .constant(true))
     }
 }
