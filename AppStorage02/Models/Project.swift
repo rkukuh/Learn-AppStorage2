@@ -12,6 +12,10 @@ struct Project: Identifiable, Codable {
     var name: String
     var items: [Item]
     
+    static var emptyProject: Project {
+        Project(name: "", items: [])
+    }
+    
     static let sampleData: [Project] = [
         Project(name: "Baju Anak",
                 items: [

@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct ProjectView: View {
+struct ProjectsView: View {
     
     @AppStorage("projectStorage") var projectStorage: Data = Data()
+    
     @State private var projects: [Project] = [Project]()
+    @State private var showNewProjectView: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -27,15 +29,16 @@ struct ProjectView: View {
                     }
                 }
             } //: Group
-            .navigationTitle("Projects")
+            .navigationTitle("Fashion Projects")
             .toolbar {
                 Button {
-                    //
+                    showNewProjectView = true
                 } label: {
                     Image(systemName: "plus")
                 }
             }
             .onAppear {
+                print("onAppear called")
                 loadSampleData()
                 
                 guard let decodedProjects = try? JSONDecoder().decode([Project].self, from: projectStorage) else {
@@ -44,7 +47,11 @@ struct ProjectView: View {
                 
                 projects = decodedProjects
             }
-        }
+            .sheet(isPresented: $showNewProjectView) {
+                AddProjectView(projects: $projects,
+                                  showNewProjectView: $showNewProjectView)
+            }
+        } //: NavigationStack
     }
     
     func loadSampleData() {
@@ -56,8 +63,8 @@ struct ProjectView: View {
     }
 }
 
-struct ProjectView_Previews: PreviewProvider {
+struct ProjectsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectView()
+        ProjectsView()
     }
 }

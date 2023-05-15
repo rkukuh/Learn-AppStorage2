@@ -18,7 +18,7 @@ struct ProjectDetailView: View {
                     Text(item.name)
                 }
             } header: {
-                Text("Items")
+                Text("Fashion Items")
             }
         }
         .navigationTitle(project.name)
@@ -27,6 +27,8 @@ struct ProjectDetailView: View {
 
 struct ProjectDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectDetailView(project: .constant(Project.sampleData[0]))
+        NavigationStack {
+            ProjectDetailView(project: .constant(Project.sampleData[0]))
+        }
     }
 }

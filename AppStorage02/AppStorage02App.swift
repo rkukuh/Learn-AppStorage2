@@ -11,7 +11,7 @@ import SwiftUI
 struct AppStorage02App: App {
     var body: some Scene {
         WindowGroup {
-            ShoppingView()
+            ProjectsView()
         }
     }
 }

@@ -13,8 +13,10 @@
 		4A9CC5132A0E25F700D480B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9CC5122A0E25F700D480B4 /* Preview Assets.xcassets */; };
 		4A9CC51A2A0E267700D480B4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC5192A0E267700D480B4 /* Project.swift */; };
 		4A9CC51C2A0E271D00D480B4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC51B2A0E271D00D480B4 /* Item.swift */; };
-		4A9CC51E2A0E294D00D480B4 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC51D2A0E294D00D480B4 /* ProjectView.swift */; };
+		4A9CC51E2A0E294D00D480B4 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC51D2A0E294D00D480B4 /* ProjectsView.swift */; };
 		4A9CC5202A0E3F0700D480B4 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC51F2A0E3F0700D480B4 /* ProjectDetailView.swift */; };
+		4A9CC54C2A122CF400D480B4 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC54B2A122CF400D480B4 /* AddProjectView.swift */; };
+		4A9CC54E2A122F5F00D480B4 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC54D2A122F5F00D480B4 /* EditProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +27,10 @@
 		4A9CC5122A0E25F700D480B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A9CC5192A0E267700D480B4 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4A9CC51B2A0E271D00D480B4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		4A9CC51D2A0E294D00D480B4 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		4A9CC51D2A0E294D00D480B4 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		4A9CC51F2A0E3F0700D480B4 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		4A9CC54B2A122CF400D480B4 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
+		4A9CC54D2A122F5F00D480B4 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		4A9CC5482A11E4F300D480B4 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				4A9CC51D2A0E294D00D480B4 /* ProjectView.swift */,
+				4A9CC51D2A0E294D00D480B4 /* ProjectsView.swift */,
 				4A9CC51F2A0E3F0700D480B4 /* ProjectDetailView.swift */,
+				4A9CC54B2A122CF400D480B4 /* AddProjectView.swift */,
+				4A9CC54D2A122F5F00D480B4 /* EditProjectView.swift */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -181,12 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9CC54E2A122F5F00D480B4 /* EditProjectView.swift in Sources */,
 				4A9CC51C2A0E271D00D480B4 /* Item.swift in Sources */,
 				4A9CC50E2A0E25F500D480B4 /* ShoppingView.swift in Sources */,
-				4A9CC51E2A0E294D00D480B4 /* ProjectView.swift in Sources */,
+				4A9CC51E2A0E294D00D480B4 /* ProjectsView.swift in Sources */,
 				4A9CC50C2A0E25F500D480B4 /* AppStorage02App.swift in Sources */,
 				4A9CC51A2A0E267700D480B4 /* Project.swift in Sources */,
 				4A9CC5202A0E3F0700D480B4 /* ProjectDetailView.swift in Sources */,
+				4A9CC54C2A122CF400D480B4 /* AddProjectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
