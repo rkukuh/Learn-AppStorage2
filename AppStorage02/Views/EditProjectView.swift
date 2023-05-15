@@ -10,10 +10,10 @@ import SwiftUI
 struct EditProjectView: View {
     
     @AppStorage("projectStorage") var projectStorage: Data = Data()
+    
     @Binding var project: Project
     
-    @State private var projectName: String = ""
-    @State private var itemName: String = ""
+    @State private var showAddItemView: Bool = false
     
     var body: some View {
         Form {
@@ -25,31 +25,46 @@ struct EditProjectView: View {
             
             Section {
                 ForEach(project.items) { item in
-                    Text(item.name)
+                    HStack {
+                        Text(item.name)
+                        
+                        Spacer()
+                        
+                        Text("\(item.quantity) \(item.measurementUnit)")
+                        
+                        Spacer()
+                        
+                        Text("\(item.price)")
+                    }
                 }
                 
-                HStack {
-                    TextField("New item", text: $itemName)
-                    
-                    Button(action: {
-                        withAnimation {
-                            let newItem = Item(store: "", name: itemName, quantity: 1, price: 1_000, measurementUnit: "m")
-                            
-                            project.items.append(newItem)
-                            
-                            guard let encodedStorage = try? JSONEncoder().encode(projectStorage) else { return }
-                            
-                            self.projectStorage = encodedStorage
-                            
-                            itemName = ""
-                        }
-                    }) {
-                        Image(systemName: "plus.circle.fill")
-                    } //: Button
-                    .disabled(itemName.isEmpty)
+                Button {
+                    showAddItemView = true
+                } label: {
+                    Label("Add Fashion Item", systemImage: "plus.circle")
+                        .multilineTextAlignment(.trailing)
                 }
+
             } header: {
-                Text("Items")
+                Text("Fashion Items")
+            }
+        } //: Form
+        .sheet(isPresented: $showAddItemView) {
+            NavigationStack {
+                AddItemView(project: $project)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Dismiss") {
+                                showAddItemView = false
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Add") {
+                                showAddItemView =  false
+                            }
+                        }
+                    }
             }
         }
     }

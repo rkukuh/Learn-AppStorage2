@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A9CC50C2A0E25F500D480B4 /* AppStorage02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC50B2A0E25F500D480B4 /* AppStorage02App.swift */; };
-		4A9CC50E2A0E25F500D480B4 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC50D2A0E25F500D480B4 /* ShoppingView.swift */; };
+		4A9CC50E2A0E25F500D480B4 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC50D2A0E25F500D480B4 /* AddItemView.swift */; };
 		4A9CC5102A0E25F700D480B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9CC50F2A0E25F700D480B4 /* Assets.xcassets */; };
 		4A9CC5132A0E25F700D480B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9CC5122A0E25F700D480B4 /* Preview Assets.xcassets */; };
 		4A9CC51A2A0E267700D480B4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9CC5192A0E267700D480B4 /* Project.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		4A9CC5082A0E25F500D480B4 /* AppStorage02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStorage02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9CC50B2A0E25F500D480B4 /* AppStorage02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage02App.swift; sourceTree = "<group>"; };
-		4A9CC50D2A0E25F500D480B4 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		4A9CC50D2A0E25F500D480B4 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		4A9CC50F2A0E25F700D480B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A9CC5122A0E25F700D480B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A9CC5192A0E267700D480B4 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				4A9CC5482A11E4F300D480B4 /* Project */,
-				4A9CC54A2A11E51E00D480B4 /* Shopping */,
+				4A9CC54A2A11E51E00D480B4 /* Item */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,12 +109,12 @@
 			name = Project;
 			sourceTree = "<group>";
 		};
-		4A9CC54A2A11E51E00D480B4 /* Shopping */ = {
+		4A9CC54A2A11E51E00D480B4 /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				4A9CC50D2A0E25F500D480B4 /* ShoppingView.swift */,
+				4A9CC50D2A0E25F500D480B4 /* AddItemView.swift */,
 			);
-			name = Shopping;
+			name = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +189,7 @@
 			files = (
 				4A9CC54E2A122F5F00D480B4 /* EditProjectView.swift in Sources */,
 				4A9CC51C2A0E271D00D480B4 /* Item.swift in Sources */,
-				4A9CC50E2A0E25F500D480B4 /* ShoppingView.swift in Sources */,
+				4A9CC50E2A0E25F500D480B4 /* AddItemView.swift in Sources */,
 				4A9CC51E2A0E294D00D480B4 /* ProjectsView.swift in Sources */,
 				4A9CC50C2A0E25F500D480B4 /* AppStorage02App.swift in Sources */,
 				4A9CC51A2A0E267700D480B4 /* Project.swift in Sources */,
