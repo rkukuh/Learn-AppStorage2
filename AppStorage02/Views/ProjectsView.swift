@@ -14,6 +14,8 @@ struct ProjectsView: View {
     @State private var projects: [Project] = [Project]()
     @State private var showNewProjectView: Bool = false
     
+    @State private var isFirstTime: Bool = true
+    
     var body: some View {
         NavigationStack {
             Group {
@@ -38,8 +40,10 @@ struct ProjectsView: View {
                 }
             }
             .onAppear {
-                print("onAppear called")
-                loadSampleData()
+                if isFirstTime {
+                    loadSampleData()
+                    isFirstTime = false
+                }
                 
                 guard let decodedProjects = try? JSONDecoder().decode([Project].self, from: projectStorage) else {
                     return
@@ -49,7 +53,7 @@ struct ProjectsView: View {
             }
             .sheet(isPresented: $showNewProjectView) {
                 AddProjectView(projects: $projects,
-                                  showNewProjectView: $showNewProjectView)
+                               showNewProjectView: $showNewProjectView)
             }
         } //: NavigationStack
     }
